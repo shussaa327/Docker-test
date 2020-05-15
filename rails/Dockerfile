@@ -15,6 +15,7 @@ RUN rails new . --database=mysql
 
 COPY ./config $APP_HOME/config
 
-EXPOSE 3000
+VOLUME /app/public
+VOLUME /app/tmp
 
 CMD ["rails", "server", "-b", "0.0.0.0"]
